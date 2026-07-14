@@ -1,6 +1,8 @@
 ﻿@app.route('/health')
 def health():
     return "Healthy", 200
+
+@app.route('/')
 def home():
     return jsonify({
         "message": "Hello from WashU Week 5 - CI/CD Pipeline!",
