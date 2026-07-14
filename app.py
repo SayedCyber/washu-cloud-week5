@@ -1,13 +1,8 @@
-﻿from flask import Flask, jsonify
-app = Flask(__name__)
-
-@app.route('/')
+﻿@app.route('/')
 def home():
-    return jsonify({"message": "Hello from WashU Week 5 - CI/CD Pipeline!"})
-
-@app.route('/health')
-def health():
-    return jsonify({"status": "healthy"})
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    return jsonify({
+        "message": "Hello from WashU Week 5 - CI/CD Pipeline!",
+        "platform": "ECS Fargate via GitHub Actions",
+        "course": "Containers and Serverless",
+        "version": "2.0"
+    })
