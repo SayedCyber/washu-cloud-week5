@@ -1,5 +1,5 @@
 ﻿@app.route('/health')
-def health():
+def health()
     return "Healthy", 200
 
 @app.route('/')
